@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    font-family: "Afacad Flux", serif;
+}
+
+.to-do-app {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 100px;
+    border-radius: 1rem;
+}
+
+.to-do-app h1 {
+    text-align: center;
+}
+
+.inputcontent {
+    display: flex;
+    background-color: #fff;
+    border-radius: 1rem;
+    background: rgba(128, 128, 128, 0.183);
+    position: relative;
+}
+
+button {
+    font-family: "Afacad Flux", serif;
+    background-color: #ff5945;
+    border: none;
+    border-radius: 1rem;
+    padding: 0rem 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+input {
+    padding: .5rem 1rem;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-family: "Afacad Flux", serif;
+    background-color: rgba(128, 128, 128, 0);
+}
+
+.task-content li {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 1.3rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.task-content li::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-image: url(./images/circle.svg);
+    background-size: cover;
+    background-position: center;
+    top: 1px;
+    left: -25px;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+li.checked::before {
+    background-image: url(./images/check-circle-fill.svg);
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    padding: .3rem .7rem;
+    border-radius: 50%;
+}
+
+li span:hover{
+    background-color: #b1b1b178;
+}
